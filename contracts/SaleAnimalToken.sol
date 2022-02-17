@@ -27,4 +27,25 @@ contract SaleAnimalToken {
 
         onSaleAnimalToken.push(_tokenId);
     }
+
+    function purchaseAnimalToken(uint _tokenId) public payable {
+        uint price = tokenPrices[_tokenId];
+        address tokenOwner = mintAnimalToken.ownerOf(_tokenId);
+
+        require(price > 0, "This animal token not sale.");
+        require(price <= msg.value, "Caller sent lower than price.");
+        require(tokenOwner != msg.sender, "Caller is animal token owner.");
+
+        payable(tokenOwner).transfer(msg.value);
+        mintAnimalToken.safeTransferFrom(tokenOwner, msg.sender, _tokenId);
+
+        tokenPrices[_tokenId] = 0;
+
+        for(uint i = 0; i < onSaleAnimalToken.length; i++) {
+            if(tokenPrices[onSaleAnimalToken[i]] == 0) {
+                onSaleAnimalToken[i] = onSaleAnimalToken[onSaleAnimalToken.length - 1];
+                onSaleAnimalToken.pop();
+            }
+        }
+    }
 }

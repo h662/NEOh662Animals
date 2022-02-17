@@ -54,6 +54,19 @@
 						"internalType": "uint256",
 						"name": "_tokenId",
 						"type": "uint256"
+					}
+				],
+				"name": "purchaseAnimalToken",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_tokenId",
+						"type": "uint256"
 					},
 					{
 						"internalType": "uint256",
@@ -218,11 +231,11 @@
 			]
 		},
 		"localhost/SaleAnimalToken.sol": {
-			"keccak256": "0x1d42f0717cbffd4fa12f42273c8ffcd6a0b3e6703a52c9383c290055b92e7155",
+			"keccak256": "0xe4bf65b768191eab0e0698038769bf6c1d1d374802d88ffdc8de0c4942113694",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://7a973eef020506a69207fdd234f41168fa8bce1b12b40ddde603a7c4fdac82bc",
-				"dweb:/ipfs/QmQfxws3VQbaBTKPwXVoi8VQxTPuGwruLVE2c9bDxq4AN6"
+				"bzz-raw://798b32a12f5f311983caa2049c496ca4e07c736774216b639665adb8873f8f75",
+				"dweb:/ipfs/QmY5KkJmyKyL2BRwxKmkZn4DkwcKJ5wQ9cKSqRCSbmottE"
 			]
 		}
 	},
