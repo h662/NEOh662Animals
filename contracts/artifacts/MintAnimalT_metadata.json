@@ -541,7 +541,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"localhost/MintAnimalToken.sol": "MintAnimals"
+			"localhost/MintAnimalToken.sol": "MintAnimalT"
 		},
 		"evmVersion": "constantinople",
 		"libraries": {},
@@ -652,11 +652,11 @@
 			]
 		},
 		"localhost/MintAnimalToken.sol": {
-			"keccak256": "0xca0e841d2880f70fd5fc7458811ffb21e69adda7980d72ddd63a5c107c714ee3",
+			"keccak256": "0xda9d836f70170edce0f64cd55801a9e690e2ae6d0fbba128dbc2e1c06286010d",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://2d7ad2fde53786f56c831ad65f1831f28a4c25579f782418367bc040e0ef394b",
-				"dweb:/ipfs/QmebWHpTQ3Mr9LTpJsn5CPvEmpytQTeYMgQMNSQVWTAjhQ"
+				"bzz-raw://1536039653ebea36435abc6c89dfe9aad706e8eb09eee79e380e7703d110d60c",
+				"dweb:/ipfs/QmVjVaTz5WJBaqptMRY1yHuVowCK838he5ipSsZFoXHVzk"
 			]
 		}
 	},
