@@ -10,7 +10,7 @@ contract SaleAnimalToken {
     constructor (address _mintAnimalToken) {
         mintAnimalToken = MintAnimalToken(_mintAnimalToken);
     }
-    
+
     mapping(uint256 => uint256) public tokenPrices;
 
     uint[] public onSaleAnimalToken;

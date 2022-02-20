@@ -112,7 +112,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"localhost/SaleAnimalToken.sol": "SaleAnimalToken"
+			"SaleAnimalToken.sol": "SaleAnimalToken"
 		},
 		"evmVersion": "constantinople",
 		"libraries": {},
@@ -230,12 +230,12 @@
 				"dweb:/ipfs/QmUgeXNqn1KLoMQicNSb91gQrRFvjeaMVmFkZeHcikHqBz"
 			]
 		},
-		"localhost/SaleAnimalToken.sol": {
-			"keccak256": "0xe4bf65b768191eab0e0698038769bf6c1d1d374802d88ffdc8de0c4942113694",
+		"SaleAnimalToken.sol": {
+			"keccak256": "0x5b247d9e490d076284ff2361840a3c05167d37bdaaf5e8bcfcfe1825fa8d205d",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://798b32a12f5f311983caa2049c496ca4e07c736774216b639665adb8873f8f75",
-				"dweb:/ipfs/QmY5KkJmyKyL2BRwxKmkZn4DkwcKJ5wQ9cKSqRCSbmottE"
+				"bzz-raw://9fcf6047fac626e948d39696cec580665c654f5ed9d60b52d4860d46d36f5cae",
+				"dweb:/ipfs/Qmbj4P18aZJrwv2rmvs4ZnB8EmJ4FKTfGU6fuuFewZhJLs"
 			]
 		}
 	},
