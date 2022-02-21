@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract MintAnimalToken is ERC721Enumerable, Ownable {
     constructor(string memory _name, string memory _symbol) ERC721(_name, _symbol) {}
-
+    
     mapping(uint => string) tokenURIs;
 
     function tokenURI(uint _tokenId) override public view returns (string memory) {
