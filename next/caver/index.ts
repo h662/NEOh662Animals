@@ -471,37 +471,6 @@ export const SALE_ANIMAL_TOKEN_ABI = [
   {
     inputs: [
       {
-        internalType: "uint256",
-        name: "_tokenId",
-        type: "uint256",
-      },
-    ],
-    name: "purchaseAnimalToken",
-    outputs: [],
-    stateMutability: "payable",
-    type: "function",
-  },
-  {
-    inputs: [
-      {
-        internalType: "uint256",
-        name: "_tokenId",
-        type: "uint256",
-      },
-      {
-        internalType: "uint256",
-        name: "_price",
-        type: "uint256",
-      },
-    ],
-    name: "setForSaleAnimalToken",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
-    inputs: [
-      {
         internalType: "address",
         name: "_mintAnimalToken",
         type: "address",
@@ -509,6 +478,38 @@ export const SALE_ANIMAL_TOKEN_ABI = [
     ],
     stateMutability: "nonpayable",
     type: "constructor",
+  },
+  {
+    inputs: [],
+    name: "getOnSaleAnimalToken",
+    outputs: [
+      {
+        internalType: "uint256[]",
+        name: "",
+        type: "uint256[]",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "_tokenId",
+        type: "uint256",
+      },
+    ],
+    name: "getTokenPrice",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
   },
   {
     inputs: [],
@@ -546,6 +547,37 @@ export const SALE_ANIMAL_TOKEN_ABI = [
     inputs: [
       {
         internalType: "uint256",
+        name: "_tokenId",
+        type: "uint256",
+      },
+    ],
+    name: "purchaseAnimalToken",
+    outputs: [],
+    stateMutability: "payable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "_tokenId",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "_price",
+        type: "uint256",
+      },
+    ],
+    name: "setForSaleAnimalToken",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
         name: "",
         type: "uint256",
       },
@@ -562,8 +594,120 @@ export const SALE_ANIMAL_TOKEN_ABI = [
     type: "function",
   },
 ];
+export const GET_ANIMAL_TOKEN_ABI = [
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "_mintAnimalToken",
+        type: "address",
+      },
+      {
+        internalType: "address",
+        name: "_saleAnimalToken",
+        type: "address",
+      },
+    ],
+    stateMutability: "nonpayable",
+    type: "constructor",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "_tokenOwner",
+        type: "address",
+      },
+    ],
+    name: "getAnimalTokens",
+    outputs: [
+      {
+        components: [
+          {
+            internalType: "uint256",
+            name: "id",
+            type: "uint256",
+          },
+          {
+            internalType: "string",
+            name: "uri",
+            type: "string",
+          },
+          {
+            internalType: "uint256",
+            name: "price",
+            type: "uint256",
+          },
+        ],
+        internalType: "struct GetAnimalToken.AnimalTokenData[]",
+        name: "",
+        type: "tuple[]",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "getSaleAnimalTokens",
+    outputs: [
+      {
+        components: [
+          {
+            internalType: "uint256",
+            name: "id",
+            type: "uint256",
+          },
+          {
+            internalType: "string",
+            name: "uri",
+            type: "string",
+          },
+          {
+            internalType: "uint256",
+            name: "price",
+            type: "uint256",
+          },
+        ],
+        internalType: "struct GetAnimalToken.AnimalTokenData[]",
+        name: "",
+        type: "tuple[]",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "mintAnimalToken",
+    outputs: [
+      {
+        internalType: "contract MintAnimalToken",
+        name: "",
+        type: "address",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "saleAnimalToken",
+    outputs: [
+      {
+        internalType: "contract SaleAnimalToken",
+        name: "",
+        type: "address",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+];
 
 export const MINT_ANIMAL_TOKEN_ADDRESS =
-  "0x3EBEFDabe174c23CE5166645EBeF29C85AF27875";
+  "0x84bdC6a291CA150265baB7309D50eC7aa1C6b58C";
 export const SALE_ANIMAL_TOKEN_ADDRESS =
-  "0x8f023A1883a9DF1D6BDdA7F3e6E045863F70b9E1";
+  "0x5aA5714BFA1437F0c12bA7Bb3A02C98b78589abc";
+export const GET_ANIMAL_TOKEN_ADDRESS =
+  "0xEF767686A0B4b7865aFA430c391a3603a65184b3";

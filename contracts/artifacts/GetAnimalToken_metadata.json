@@ -11,38 +11,77 @@
 						"internalType": "address",
 						"name": "_mintAnimalToken",
 						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_saleAnimalToken",
+						"type": "address"
 					}
 				],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
 			},
 			{
-				"inputs": [],
-				"name": "getOnSaleAnimalToken",
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_tokenOwner",
+						"type": "address"
+					}
+				],
+				"name": "getAnimalTokens",
 				"outputs": [
 					{
-						"internalType": "uint256[]",
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "uri",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "price",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct GetAnimalToken.AnimalTokenData[]",
 						"name": "",
-						"type": "uint256[]"
+						"type": "tuple[]"
 					}
 				],
 				"stateMutability": "view",
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_tokenId",
-						"type": "uint256"
-					}
-				],
-				"name": "getTokenPrice",
+				"inputs": [],
+				"name": "getSaleAnimalTokens",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "uri",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "price",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct GetAnimalToken.AnimalTokenData[]",
 						"name": "",
-						"type": "uint256"
+						"type": "tuple[]"
 					}
 				],
 				"stateMutability": "view",
@@ -62,69 +101,13 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "onSaleAnimalToken",
+				"inputs": [],
+				"name": "saleAnimalToken",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "contract SaleAnimalToken",
 						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_tokenId",
-						"type": "uint256"
-					}
-				],
-				"name": "purchaseAnimalToken",
-				"outputs": [],
-				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_tokenId",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_price",
-						"type": "uint256"
-					}
-				],
-				"name": "setForSaleAnimalToken",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "tokenPrices",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -144,7 +127,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"SaleAnimalToken.sol": "SaleAnimalToken"
+			"GetAnimalToken.sol": "GetAnimalToken"
 		},
 		"evmVersion": "constantinople",
 		"libraries": {},
@@ -252,6 +235,14 @@
 			"urls": [
 				"bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f",
 				"dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy"
+			]
+		},
+		"GetAnimalToken.sol": {
+			"keccak256": "0x3095ff644fa74c6415da09bd872093f5b231615d0425223cdf8a1c7742b168be",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://30f68d7ce936b6dd2ed3418cb36599b1021fdde4c7dff078a76182357291a4bc",
+				"dweb:/ipfs/QmT1zRtdmvNYiVTpcofyEv9U7cLWGdvrWWre68iNKFkegd"
 			]
 		},
 		"MintAnimalToken.sol": {

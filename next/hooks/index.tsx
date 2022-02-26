@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import Caver from "caver-js";
 import {
+  GET_ANIMAL_TOKEN_ABI,
+  GET_ANIMAL_TOKEN_ADDRESS,
   MINT_ANIMAL_TOKEN_ABI,
   MINT_ANIMAL_TOKEN_ADDRESS,
   SALE_ANIMAL_TOKEN_ABI,
@@ -33,6 +35,7 @@ export const useCaver = () => {
   const [caver, setCaver] = useState<any>();
   const [mintAnimalToken, setMintAnimalToken] = useState<any>();
   const [saleAnimalToken, setSaleAnimalToken] = useState<any>();
+  const [getAnimalToken, setGetAnimalToken] = useState<any>();
 
   useEffect(() => {
     setCaver(new Caver(window.klaytn));
@@ -47,7 +50,10 @@ export const useCaver = () => {
     setSaleAnimalToken(
       caver.contract.create(SALE_ANIMAL_TOKEN_ABI, SALE_ANIMAL_TOKEN_ADDRESS)
     );
+    setGetAnimalToken(
+      caver.contract.create(GET_ANIMAL_TOKEN_ABI, GET_ANIMAL_TOKEN_ADDRESS)
+    );
   }, [caver]);
 
-  return { caver, mintAnimalToken, saleAnimalToken };
+  return { caver, mintAnimalToken, saleAnimalToken, getAnimalToken };
 };

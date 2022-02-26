@@ -48,4 +48,12 @@ contract SaleAnimalToken {
             }
         }
     }
+
+    function getTokenPrice(uint _tokenId) public view returns (uint) {
+        return tokenPrices[_tokenId];
+    }
+
+    function getOnSaleAnimalToken() public view returns (uint[] memory) {
+        return onSaleAnimalToken;
+    }
 }

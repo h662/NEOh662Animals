@@ -8,6 +8,7 @@ const nextConfig = {
       https: false,
       crypto: false,
       stream: false,
+      process: false,
     };
 
     return config;
