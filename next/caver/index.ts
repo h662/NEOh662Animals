@@ -1,4 +1,6 @@
-export const MINT_ANIMAL_TOKEN_ABI = [
+import { AbiItem } from "caver-js";
+
+export const MINT_ANIMAL_TOKEN_ABI: AbiItem[] = [
   {
     inputs: [
       {
@@ -467,7 +469,7 @@ export const MINT_ANIMAL_TOKEN_ABI = [
     type: "function",
   },
 ];
-export const SALE_ANIMAL_TOKEN_ABI = [
+export const SALE_ANIMAL_TOKEN_ABI: AbiItem[] = [
   {
     inputs: [
       {
@@ -594,7 +596,7 @@ export const SALE_ANIMAL_TOKEN_ABI = [
     type: "function",
   },
 ];
-export const GET_ANIMAL_TOKEN_ABI = [
+export const GET_ANIMAL_TOKEN_ABI: AbiItem[] = [
   {
     inputs: [
       {
